@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa6";
-import { SiExpo, SiFirebase, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiVisualstudio, SiVite } from "react-icons/si";
+import { SiExpo, SiFirebase, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiSass, SiTailwindcss, SiVisualstudio, SiVite } from "react-icons/si";
 
 interface Props {
     name: string;
@@ -43,9 +43,17 @@ export function Tech({ name }: Props) {
             {name === 'postgresql' && (
                 <SiPostgresql size={30} className="text-blue-500" />
             )}
-            
+
             {name === 'vscode' && (
                 <SiVisualstudio size={30} className="text-blue-500" />
+            )}
+
+            {name === 'tailwindcss' && (
+                <SiTailwindcss size={30} className="text-blue-500" />
+            )}
+
+            {name === 'sass' && (
+                <SiSass size={30} className="text-purple-400" />
             )}
 
             <p className="font-bold text-white">
@@ -59,6 +67,8 @@ export function Tech({ name }: Props) {
                 {name === 'prisma' && 'Prisma'}
                 {name === 'postgresql' && 'Postgresql'}
                 {name === 'vscode' && 'VS Code'}
+                {name === 'tailwindcss' && 'Tailwind CSS'}
+                {name === 'sass' && 'Sass'}
             </p>
         </div>
     )

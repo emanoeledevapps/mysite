@@ -15,7 +15,7 @@ export default function Project({params}: Props){
     const project = GetProject(params.id);
 
     return(
-        <main className="flex min-h-screen flex-col items-center pb-5">
+        <main className="flex min-h-screen flex-col items-center pb-5 bg-black">
             <Header/>
             <div className="w-full h-[250px] bg-gray-400">
                 <Image
@@ -27,8 +27,8 @@ export default function Project({params}: Props){
                 />
             </div>
 
-            <div className="w-[1024px] flex flex-col mt-5">
-                <section className="flex gap-5">
+            <div className="px-2 lg:px-0 lg:w-[1024px] w-full flex flex-col mt-5">
+                <section className="flex flex-col gap-5 lg:flex-row">
                     <Image
                         alt='Icone do projeto'
                         src={project.icon}
@@ -37,7 +37,7 @@ export default function Project({params}: Props){
                         className="w-[200px] h-[200px] rounded-md object-cover"
                     />
 
-                    <div className="flexx flex-col">
+                    <div className="flex flex-col">
                         <h1 className="font-bold text-white text-5xl">{project.title}</h1>
                         <h2 className="text-gray-200">{project.shortDescription}</h2>
 

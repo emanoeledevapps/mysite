@@ -8,7 +8,7 @@ export function Header() {
             <div className="w-full max-w-[1024px] flex items-center justify-between mx-3">
                 <Link
                     href='/'
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-3 text-white"
                 >
                     <Image
                         alt='Foto de perfil'
@@ -23,12 +23,14 @@ export function Header() {
                 <nav className="flex items-center gap-5">
                     <Link
                         href='/projects'
+                        className="text-white"
                     >
                         Projetos
                     </Link>
 
                     <Link
                         href='/about'
+                        className="text-white"
                     >
                         Sobre mim
                     </Link>
