@@ -2,6 +2,8 @@ import { Header } from "@/app/_components/header";
 import { Tech } from "@/app/_components/Tech";
 import { GetProject } from "@/app/services/projects";
 import Image from "next/image";
+import Link from "next/link";
+import { FaGooglePlay } from "react-icons/fa6";
 
 interface Props{
     params:{
@@ -38,6 +40,36 @@ export default function Project({params}: Props){
                     <div className="flexx flex-col">
                         <h1 className="font-bold text-white text-5xl">{project.title}</h1>
                         <h2 className="text-gray-200">{project.shortDescription}</h2>
+
+                        <div className="flex gap-5 mt-5">
+                            {project.googlePlayUrl && (
+                                <Link
+                                    href={project.googlePlayUrl}
+                                    target="_blank"
+                                    className="px-5 h-10 border-2 border-white rounded-xl flex items-center gap-3 text-white font-bold hover:text-black hover:bg-white duration-500"
+                                >
+                                    <FaGooglePlay size={20}/>
+                                    Google Play
+                                </Link>
+                            )}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="flex flex-col mt-20">
+                    <h3 className="font-bold text-white text-lg">Capturas de tela</h3>
+                    
+                    <div className="flex gap-3 overflow-scroll">
+                        {project.screenshots.map(item => (
+                            <Image
+                            key={item.url}
+                                alt='Captura de tela'
+                                src={item.url}
+                                width={720}
+                                height={1280}
+                                className="w-[350px] h-[500px] object-cover rounded-md border-2 border-white"
+                            />
+                        ))}
                     </div>
                 </section>
 
