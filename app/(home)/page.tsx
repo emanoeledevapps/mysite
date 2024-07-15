@@ -7,6 +7,8 @@ import { GoDependabot } from "react-icons/go";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { Header } from "../_components/header";
 import { Tech } from "../_components/Tech";
+import { projects } from "../services/projects";
+import { ProjectItem } from "../_components/ProjectItem";
 
 
 export default function Home() {
@@ -32,29 +34,9 @@ export default function Home() {
 
                 <h3 className="mt-20 text-white">Projetos</h3>
                 <section className="flex overflow-scroll gap-5">
-                    <div className="w-[200px] h-[250px] bg-red-500 rounded-md flex flex-col overflow-hidden">
-                        <div className="w-full h-[50%] bg-blue-400">
-
-                        </div>
-
-                        <div className="p-2 flex flex-col">
-                            <h5 className="font-bold text-white">Titulo aqui</h5>
-
-                            <p className="text-sm text-gray-300">Lorem ipsom dolor, sempre vai ser assim</p>
-                        </div>
-                    </div>
-
-                    <div className="w-[200px] h-[250px] bg-red-500 rounded-md flex flex-col overflow-hidden">
-                        <div className="w-full h-[50%] bg-blue-400">
-
-                        </div>
-
-                        <div className="p-2 flex flex-col">
-                            <h5 className="font-bold text-white">Titulo aqui</h5>
-
-                            <p className="text-sm text-gray-300">Lorem ipsom dolor, sempre vai ser assim</p>
-                        </div>
-                    </div>
+                    {projects.map(item => (
+                        <ProjectItem data={item} key={item.icon}/>
+                    ))}
                 </section>
 
                 <h3 className="mt-10 text-white">Tecnologias que utilizo</h3>
