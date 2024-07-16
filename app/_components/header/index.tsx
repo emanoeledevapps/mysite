@@ -4,7 +4,7 @@ import ImagePerfil from '../../../public/assets/perfil.jpg';
 
 export function Header() {
     return (
-        <div className="w-full h-[70px] border-b border-gray-300 items-center justify-center flex">
+        <header className="w-full h-[70px] border-b border-gray-300 items-center justify-center flex bg-black">
             <div className="w-full max-w-[1024px] flex items-center justify-between mx-3">
                 <Link
                     href='/'
@@ -36,6 +36,6 @@ export function Header() {
                     </Link>
                 </nav>
             </div>
-        </div>
+        </header>
     )
 }
