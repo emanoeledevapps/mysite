@@ -3,6 +3,7 @@ import { Footer } from "../_components/Footer";
 import { Header } from "../_components/header";
 import ImageProfile from '../../public/assets/perfil.jpg';
 import LogoSintrop from '../../public/assets/icon-sintrop.png';
+import { ButtonLinkStore } from "../_components/ButtonLinkStore";
 
 export default function About() {
     return (
@@ -56,8 +57,55 @@ export default function About() {
                             </div>
                         </div>
                         <p className="text-gray-200">
-
+                            Meu primeiro emprego como programador, iniciei no modo colaborativo no projeto, consegui me destacar e depois fui contratado para trabalhar full-time no projeto.
                         </p>
+                        <p className="text-gray-200">
+                            Eu atuo no desenvolvimento do Front-End (Website, plataforma web e aplicativo móvel):
+                        </p>
+
+                        <p className="text-gray-200 ml-2">
+                            -Website:
+                        </p>
+                        <p className="text-gray-200 ml-5">
+                            Utilizamos NextJS no website, aproveitando todos os recursos de SEO e SSR (Server Side Rendering) que ele nos proporciona. Dentro do site também criamos um blog para postagens de conteúdos, utilizando o TipTap como editor de textos;
+                        </p>
+
+                        <p className="text-gray-200 ml-2 mt-2">
+                            -Plataforma Web:
+                        </p>
+                        <p className="text-gray-200 ml-5">
+                            Foi desenvolvida com ReactJS (CRA), e é nela onde a gente faz todas as interações com Smart Contracts da Blockchain da Ethereum.
+                        </p>
+
+                        <p className="text-gray-200 ml-2 mt-2">
+                            -Aplicativo móvel:
+                        </p>
+                        <p className="text-gray-200 ml-5">
+                            Desenvolvido com React Native e Expo, o aplicativo foi pensado para promover a interação dos usuários como uma espécie de Rede Social, mas com foco na agricultura regenerativa. O aplicativo conta também com um modo offline, para que inspetores possam inspecionar produtores que não tenham conexão com a internet.
+                        </p>
+
+                        <p className="text-gray-200 mt-2">
+                            Links:
+                        </p>
+                        <div className="flex items-center gap-5">
+                            <ButtonLinkStore
+                                title="Website"
+                                href="https://sintrop.com"
+                                icon="website"
+                            />
+
+                            <ButtonLinkStore
+                                title="Google Play"
+                                href="https://play.google.com/store/apps/details?id=com.sintrop.activistapp"
+                                icon="google-play"
+                            />
+
+                            <ButtonLinkStore
+                                title="Apple Store"
+                                href="https://apps.apple.com/br/app/sintrop/id6475600488"
+                                icon="apple-store"
+                            />
+                        </div>
                     </section>
 
                     <h3 className="font-bold text-white mt-10">O que gosto de fazer</h3>

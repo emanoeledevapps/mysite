@@ -1,3 +1,4 @@
+import { ButtonLinkStore } from "@/app/_components/ButtonLinkStore";
 import { Footer } from "@/app/_components/Footer";
 import { Header } from "@/app/_components/header";
 import { Tech } from "@/app/_components/Tech";
@@ -46,25 +47,19 @@ export default function Project({ params }: Props) {
 
                             <div className="flex gap-5 mt-5">
                                 {project.googlePlayUrl && (
-                                    <Link
+                                    <ButtonLinkStore
+                                        title="Google Play"
                                         href={project.googlePlayUrl}
-                                        target="_blank"
-                                        className="px-5 h-10 border-2 border-white rounded-xl flex items-center gap-3 text-white font-bold hover:text-black hover:bg-white duration-500"
-                                    >
-                                        <FaGooglePlay size={20} />
-                                        Google Play
-                                    </Link>
+                                        icon="google-play"
+                                    />
                                 )}
 
                                 {project.websiteUrl && (
-                                    <Link
+                                    <ButtonLinkStore
+                                        title="Site"
                                         href={project.websiteUrl}
-                                        target="_blank"
-                                        className="px-5 h-10 border-2 border-white rounded-xl flex items-center gap-3 text-white font-bold hover:text-black hover:bg-white duration-500"
-                                    >
-                                        <BiWorld size={20} />
-                                        Site
-                                    </Link>
+                                        icon="website"
+                                    />
                                 )}
                             </div>
                         </div>
