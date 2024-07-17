@@ -20,8 +20,8 @@ export default function Home() {
             <Header />
             
             <main className="flex min-h-screen flex-col items-center pb-20 bg-black">
-                <div className="w-full px-2 lg:px-0 lg:w-[1024px] flex flex-col mt-32">
-                    <div className="flex flex-col w-full items-center">
+                <div className="w-full lg:w-[1024px] flex flex-col mt-32">
+                    <div className="flex flex-col w-full items-center px-2 lg:px-0">
                         <h1 className="text-white font-bold text-4xl text-center lg:w-[60%]">Olá, me chamo Emanoel Augusto e sou Desenvolvedor Front-End</h1>
 
                         <div className="flex flex-wrap gap-5 mt-10">
@@ -45,8 +45,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <h3 className="mt-20 text-white font-bold">Projetos</h3>
-                    <section className="flex overflow-scroll gap-5 w-full">
+                    <h3 className="mt-20 text-white font-bold ml-2 lg:ml-0">Alguns dos meus projetos</h3>
+                    <section className="flex overflow-x-auto gap-5 w-full px-2 lg:px-0">
                         {projects.map(item => (
                             <ProjectItem data={item} key={item.icon} />
                         ))}
@@ -57,8 +57,8 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <h3 className="mt-20 text-white font-bold">Tecnologias que utilizo</h3>
-                    <section className="flex flex-wrap gap-7 w-full mt-1">
+                    <h3 className="mt-20 text-white font-bold ml-2 lg:ml-">Tecnologias que utilizo</h3>
+                    <section className="flex flex-wrap gap-7 w-full mt-1 px-2 justify-center lg:justify-normal lg:px-0">
                         <Tech name="reactjs" />
                         <Tech name="nextjs" />
                         <Tech name="vite" />
