@@ -1,12 +1,9 @@
 import { ButtonLinkStore } from "@/app/_components/ButtonLinkStore";
 import { Footer } from "@/app/_components/Footer";
-import { Header } from "@/app/_components/Header";
+import { Header } from "@/app/_components/header";
 import { Tech } from "@/app/_components/Tech";
 import { GetProject } from "@/app/services/projects";
 import Image from "next/image";
-import Link from "next/link";
-import { BiWorld } from "react-icons/bi";
-import { FaGooglePlay } from "react-icons/fa6";
 
 interface Props {
     params: {
