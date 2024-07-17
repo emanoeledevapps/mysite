@@ -18,7 +18,7 @@ export default function Project({ params }: Props) {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center pb-20 bg-black">
-                <div className="w-full h-[250px] bg-gray-400">
+                <div className="w-full h-[250px] bg-gray-400 hidden lg:flex">
                     <Image
                         alt="Banner do projeto"
                         src={project?.bannerUrl}

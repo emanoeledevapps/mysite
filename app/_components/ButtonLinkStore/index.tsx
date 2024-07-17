@@ -14,7 +14,7 @@ export function ButtonLinkStore({ href, title, icon }: Props) {
         <Link
             href={href}
             target="_blank"
-            className="px-5 h-10 border-2 border-white rounded-xl flex items-center gap-3 text-white font-bold hover:text-black hover:bg-white duration-500"
+            className="px-5 h-12 border-2 border-white rounded-xl flex items-center gap-3 text-white font-bold hover:text-black hover:bg-white duration-500"
         >
             {icon === 'google-play' && (
                 <FaGooglePlay size={20} />

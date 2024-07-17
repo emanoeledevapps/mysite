@@ -87,7 +87,7 @@ export default function About() {
                         <p className="text-gray-200 mt-2">
                             Links:
                         </p>
-                        <div className="flex items-center gap-5">
+                        <div className="flex items-center gap-5 overflow-x-auto">
                             <ButtonLinkStore
                                 title="Website"
                                 href="https://sintrop.com"

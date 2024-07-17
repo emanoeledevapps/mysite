@@ -10,9 +10,9 @@ export default function Projects(){
             <Header/>
             <main className="flex flex-col items-center w-full min-h-screen bg-black pb-20">
                 <div className="w-full px-2 lg:px-0 lg:w-[1024px] flex flex-col mt-32">
-                    <h1 className="text-white font-bold text-7xl text-center">Meus projetos</h1>
+                    <h1 className="text-white font-bold text-5xl text-center">Meus projetos</h1>
 
-                    <div className="mt-20 flex flex-wrap gap-5">
+                    <div className="mt-20 flex flex-wrap gap-5 justify-center lg:justify-start">
                         {projects.map(item => (
                             <ProjectItem
                                 key={item.id}
