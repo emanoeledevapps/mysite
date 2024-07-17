@@ -1,6 +1,6 @@
 import { ButtonLinkStore } from "@/app/_components/ButtonLinkStore";
 import { Footer } from "@/app/_components/Footer";
-import { Header } from "@/app/_components/header";
+import { Header } from "@/app/_components/Header";
 import { Tech } from "@/app/_components/Tech";
 import { GetProject } from "@/app/services/projects";
 import Image from "next/image";

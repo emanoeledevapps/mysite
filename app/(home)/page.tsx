@@ -5,7 +5,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { PiBagFill } from "react-icons/pi";
 import { GoDependabot } from "react-icons/go";
 import { FaMapMarkedAlt } from "react-icons/fa";
-import { Header } from "../_components/header";
+import { Header } from "../_components/Header";
 import { Tech } from "../_components/Tech";
 import { projects } from "../services/projects";
 import { ProjectItem } from "../_components/ProjectItem";

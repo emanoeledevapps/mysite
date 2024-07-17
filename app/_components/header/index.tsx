@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ImagePerfil from '../../../public/assets/perfil.jpg';
+import { NavMenu } from "./components/NavMenu";
 
 export function Header() {
     return (
@@ -20,7 +21,7 @@ export function Header() {
                     EDevApps
                 </Link>
 
-                <nav className="flex items-center gap-5">
+                <nav className="hidden lg:flex items-center gap-5 ">
                     <Link
                         href='/projects'
                         className="text-white"
@@ -35,6 +36,10 @@ export function Header() {
                         Sobre mim
                     </Link>
                 </nav>
+
+                <div className="flex lg:hidden">
+                    <NavMenu/>
+                </div>
             </div>
         </header>
     )

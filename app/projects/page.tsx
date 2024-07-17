@@ -1,5 +1,5 @@
 import { Footer } from "../_components/Footer";
-import { Header } from "../_components/header";
+import { Header } from "../_components/Header";
 import { ProjectItem } from "../_components/ProjectItem";
 import { projects } from "../services/projects";
 

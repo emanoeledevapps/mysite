@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Footer } from "../_components/Footer";
-import { Header } from "../_components/header";
+import { Header } from "../_components/Header";
 import ImageProfile from '../../public/assets/perfil.jpg';
 import LogoSintrop from '../../public/assets/icon-sintrop.png';
 import { ButtonLinkStore } from "../_components/ButtonLinkStore";
