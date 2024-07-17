@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "EDevApps - Desenvolvimento de aplicativos e websites",
-  description: "descrição",
+  description: "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
+  icons: "https://edevapps.com.br/assets/perfil.jpg"
 };
 
 export default function RootLayout({
