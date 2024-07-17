@@ -55,6 +55,31 @@ export const projects: ProjectProps[] = [
         techs: ['react-native', 'expo', 'firebase', 'nodejs', 'prisma', 'postgresql'],
         aboutDevelopment: 'O aplicativo foi desenvolvido com React Native e Expo com TypeScript, utilizando o firebase para fazer a autenticação dos usuários e armazenamento de imagens. O back-end foi desenvolvido em Node com TypeScript, para o banco de dados postgresql com o ORM Prisma.',
         googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.emanoeledevapps.bolaofutebol'
+    },
+    {
+        id: 'decode-text',
+        title: 'DecodeText',
+        description: 'Projeto desenvolvido durante um curso que ganhei da alura em parceria com a Oracle (Programa ONE - Oracle Next Education), onde foi proposto como uma atividade o desenvolvimento de um codificador/descodificador de texto, utilizando os conhecimentos obtidos nas aulas.',
+        shortDescription: 'Criptografe frases ou palavras de forma fácil, e faça o inverso também.',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/DecodeText%2Ficon-decode-text.png?alt=media&token=09a3006b-859b-41dd-b51e-5a6c72e3f177',
+        bannerUrl: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/DecodeText%2Fbanner-decode-text.png?alt=media&token=623bb069-fd82-40e3-9d26-fd580bdc830a',
+        screenshots: [
+            {
+                url: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/DecodeText%2Fsplash01.png?alt=media&token=79aedac5-0605-479b-8ce5-0cd2c74edf5f',
+                orientation: 'landscape',
+            },
+            {
+                url: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/DecodeText%2Fsplash02.png?alt=media&token=8226816f-325b-40bb-b370-6759887a7f01',
+                orientation: 'landscape',
+            },
+            {
+                url: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/DecodeText%2Fsplash03.png?alt=media&token=09ce4428-152b-4e2b-a4d8-2560a30f32c1',
+                orientation: 'landscape',
+            },
+        ],
+        techs: ['html', 'css', 'javascript'],
+        aboutDevelopment: 'O projeto foi desenvolvido utilizando Html e CSS na parte visual e javascript para a lógica da criptografia/descriptografia, lógica essa bem simples, em que consiste em trocar algumas letras por palavras pré-definidas.',
+        websiteUrl: 'https://emanoeledevapps.github.io/projetos/decodeText/index.html'
     }
 ];
 

@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa6";
-import { SiExpo, SiFirebase, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiSass, SiTailwindcss, SiVisualstudio, SiVite } from "react-icons/si";
+import { SiCss3, SiExpo, SiFirebase, SiHtml5, SiJavascript, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiSass, SiTailwindcss, SiTypescript, SiVisualstudio, SiVite } from "react-icons/si";
 
 interface Props {
     name: string;
@@ -56,6 +56,22 @@ export function Tech({ name }: Props) {
                 <SiSass size={30} className="text-purple-400" />
             )}
 
+            {name === 'javascript' && (
+                <SiJavascript size={30} className="text-yellow-500" />
+            )}
+
+            {name === 'typescript' && (
+                <SiTypescript size={30} className="text-blue-500" />
+            )}
+
+            {name === 'html' && (
+                <SiHtml5 size={30} className="text-orange-600" />
+            )}
+
+            {name === 'css' && (
+                <SiCss3 size={30} className="text-blue-500" />
+            )}
+
             <p className="font-bold text-white">
                 {name === 'reactjs' && 'ReactJS'}
                 {name === 'react-native' && 'React Native'}
@@ -69,6 +85,10 @@ export function Tech({ name }: Props) {
                 {name === 'vscode' && 'VS Code'}
                 {name === 'tailwindcss' && 'Tailwind CSS'}
                 {name === 'sass' && 'Sass'}
+                {name === 'javascript' && 'Javascript'}
+                {name === 'typescript' && 'Typescript'}
+                {name === 'html' && 'HTML'}
+                {name === 'css' && 'CSS'}
             </p>
         </div>
     )

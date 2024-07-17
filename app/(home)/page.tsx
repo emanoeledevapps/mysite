@@ -58,7 +58,7 @@ export default function Home() {
                     </section>
 
                     <h3 className="mt-20 text-white font-bold">Tecnologias que utilizo</h3>
-                    <section className="flex flex-wrap gap-7 w-[50%] mt-1">
+                    <section className="flex flex-wrap gap-7 w-full mt-1">
                         <Tech name="reactjs" />
                         <Tech name="nextjs" />
                         <Tech name="vite" />
@@ -71,6 +71,10 @@ export default function Home() {
                         <Tech name="prisma" />
                         <Tech name="postgresql" />
                         <Tech name="vscode" />
+                        <Tech name="html" />
+                        <Tech name="javascript" />
+                        <Tech name="typescript" />
+                        <Tech name="css" />
                     </section>
                 </div>
             </main>
