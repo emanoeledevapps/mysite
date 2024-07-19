@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
   icons: "https://edevapps.com.br/assets/perfil.jpg",
   openGraph:{
-    images: 'https://edevapps.com.br/assets/post-retangle.jpg',
+    images: 'https://edevapps.com.br/assets/post-retangle.png',
     title: 'EDevApps - Desenvolvimento de aplicativos e websites',
-    description: 'Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!'
+    description: 'Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!',
   }
 };
 
