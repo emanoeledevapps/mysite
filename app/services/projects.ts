@@ -10,6 +10,7 @@ export interface ProjectProps {
     websiteUrl?: string;
     googlePlayUrl?: string;
     appleStoreUrl?: string;
+    githubUrl?: string;
     aboutDevelopment: string;
 }
 
@@ -80,6 +81,32 @@ export const projects: ProjectProps[] = [
         techs: ['html', 'css', 'javascript'],
         aboutDevelopment: 'O projeto foi desenvolvido utilizando Html e CSS na parte visual e javascript para a lógica da criptografia/descriptografia, lógica essa bem simples, em que consiste em trocar algumas letras por palavras pré-definidas.',
         websiteUrl: 'https://emanoeledevapps.github.io/projetos/decodeText/index.html'
+    },
+    {
+        id: 'buscador-cep',
+        title: 'Buscador Cep',
+        description: 'No BuscadorCEP você pode encontrar algum endereço através do código postal, ou então se você quer descobrir o código postal de alguma localização também é possível.',
+        shortDescription: 'Localize seu CEP ou busque um endereço através de um CEP.',
+        icon: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/BuscadorCEP%2Ficon-buscador-cep.png?alt=media&token=1c94bfc0-1aa9-4238-8b1d-44fe0692a160',
+        bannerUrl: 'https://firebasestorage.googleapis.com/v0/b/bolaofutebol-be9d3.appspot.com/o/BuscadorCEP%2Fbanner-buscadorcep.png?alt=media&token=f8f47e93-3cd4-4489-ae89-67070ab71114',
+        screenshots: [
+            {
+                url: 'https://user-images.githubusercontent.com/50122269/199067448-755b5ad7-a961-4fc8-a8f4-5b2244c356bf.png',
+                orientation: 'landscape',
+            },
+            {
+                url: 'https://user-images.githubusercontent.com/50122269/199067514-6c3f5ed7-83c4-4e1e-93ec-e824452427f8.png',
+                orientation: 'landscape',
+            },
+            {
+                url: 'https://user-images.githubusercontent.com/50122269/199067561-02954bfc-a540-436c-b702-31809db1d417.png',
+                orientation: 'landscape',
+            },
+        ],
+        techs: ['reactjs', 'css', 'typescript'],
+        aboutDevelopment: 'O projeto foi desenvolvido utilizando ReactJS (CRA) e TypeScript, com CSS para estilização da interface. Para as funcionalidades, utilizei o Axios para comunicação com as APIs do IBGE e ViaCEP. Também integrei a biblioteca RadixUI para criar algumas interfaces específicas. Esse conjunto de tecnologias e ferramentas permitiu criar uma aplicação robusta e funcional, focada na experiência do usuário e na integração com APIs externas essenciais para o seu funcionamento.',
+        websiteUrl: 'https://appbuscadorcep.netlify.app',
+        githubUrl: 'https://github.com/emanoeledevapps/BuscadorCEP'
     }
 ];
 
