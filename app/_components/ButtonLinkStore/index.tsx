@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BiWorld } from "react-icons/bi";
 import { FaGooglePlay } from "react-icons/fa";
 import { GrAppleAppStore } from "react-icons/gr";
+import { SiGithub } from "react-icons/si";
 
 interface Props {
     href: string;
@@ -26,6 +27,10 @@ export function ButtonLinkStore({ href, title, icon }: Props) {
 
             {icon === 'website' && (
                 <BiWorld size={20} />
+            )}
+
+            {icon === 'github' && (
+                <SiGithub size={20} />
             )}
 
             {title}

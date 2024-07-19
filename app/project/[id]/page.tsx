@@ -58,6 +58,14 @@ export default function Project({ params }: Props) {
                                         icon="website"
                                     />
                                 )}
+
+                                {project.githubUrl && (
+                                    <ButtonLinkStore
+                                        title="Repositório"
+                                        href={project.githubUrl}
+                                        icon="github"
+                                    />
+                                )}
                             </div>
                         </div>
                     </section>
