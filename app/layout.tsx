@@ -7,7 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "EDevApps - Desenvolvimento de aplicativos e websites",
   description: "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
-  icons: "https://edevapps.com.br/assets/perfil.jpg"
+  icons: "https://edevapps.com.br/assets/perfil.jpg",
+  openGraph:{
+    images: 'https://edevapps.com.br/assets/post-retangle.jpg',
+    title: 'EDevApps - Desenvolvimento de aplicativos e websites',
+    description: 'Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!'
+  }
 };
 
 export default function RootLayout({
