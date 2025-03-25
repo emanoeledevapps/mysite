@@ -47,7 +47,7 @@ export default function TermsOfUse() {
       </main>
 
       <footer className="mt-10 py-10">
-
+        <p className="text-center">contato@soccerbolao.com.br</p>
       </footer>
     </>
   )
