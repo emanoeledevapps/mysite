@@ -9,7 +9,7 @@ interface Props {
 }
 export function Header({ t }: Props) {
   return (
-    <header className="w-full h-[80px] items-center justify-center flex bg-background border-b">
+    <header className="w-full h-[80px] items-center justify-center flex bg-primary border-b">
       <div className="w-full container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           EDevApps

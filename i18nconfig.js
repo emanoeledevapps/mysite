@@ -1,5 +1,5 @@
 const i18nConfig = {
-  locales: ["en", "pt"],
+  locales: ["en", "pt-BR"],
   defaultLocale: "en",
   localeDetector: (request, config) => {
     // your custom locale detection logic
