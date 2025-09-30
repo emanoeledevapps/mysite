@@ -11,14 +11,16 @@ export interface ProjectStrapiProps {
   description: string;
   images: ImageStrapi[] | null;
   background: ImageStrapi | null;
+  icon: ImageStrapi | null;
 }
 
-export interface ProjectList {
-  id: number;
+export interface ProjectProps {
+  id: string;
   title: string;
   description: string;
   publishedAt: string;
   background: ImageProject | null;
+  icon: ImageProject | null;
   locale: string;
   images: ImageProject[] | null;
 }

@@ -10,11 +10,16 @@ export interface StrapiPagination {
   total: number;
 }
 
-export interface StrapiResponse<T = StrapiResponseItem> {
+export interface StrapiResponseArray<T = StrapiResponseItem> {
   data: T[];
   meta: {
     pagination: StrapiPagination;
   }
+}
+
+export interface StrapiResponseObject<T = StrapiResponseItem> {
+  data: T;
+  meta: {};
 }
 
 export interface ImageStrapi {
