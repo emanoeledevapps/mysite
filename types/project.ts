@@ -12,6 +12,7 @@ export interface ProjectStrapiProps {
   images: ImageStrapi[] | null;
   background: ImageStrapi | null;
   icon: ImageStrapi | null;
+  overview: BlockNodeStrapi[]
 }
 
 export interface ProjectProps {
@@ -23,6 +24,7 @@ export interface ProjectProps {
   icon: ImageProject | null;
   locale: string;
   images: ImageProject[] | null;
+  overview: BlockNodeStrapi[];
 }
 
 export interface ImageProject {
@@ -37,4 +39,13 @@ export interface ImageProject {
   provider: string;
   publishedAt: string;
   alternativeText: string | null
+}
+
+export interface BlockNodeStrapi {
+  type: string;
+  children?: BlockNodeStrapi[];
+  text?: string;
+  level?: number;
+  bold?: boolean;
+  italic?: boolean;
 }

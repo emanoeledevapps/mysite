@@ -47,7 +47,8 @@ function parseProject(data: ProjectStrapiProps): ProjectProps {
     publishedAt: data.publishedAt,
     background: backgroundResponse ? background : null,
     images: null,
-    icon: iconResponse ? icon : null
+    icon: iconResponse ? icon : null,
+    overview: data?.overview
   }
 }
 

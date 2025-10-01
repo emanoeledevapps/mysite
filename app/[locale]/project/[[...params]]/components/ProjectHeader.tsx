@@ -10,7 +10,7 @@ interface Props {
 export function ProjectHeader({ project }: Props) {
   return (
     <section className="flex flex-col w-full mt-20">
-      <div className="flex justify-between w-full h-[250px]">
+      <div className="flex justify-between w-full">
         <div className="flex flex-col gap-2">
           <h2 className="font-bold text-7xl">{project.title}</h2>
           <p className="">{project.description}</p>
