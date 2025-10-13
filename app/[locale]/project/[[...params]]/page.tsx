@@ -21,7 +21,16 @@ export default async function Project({ params }: Props) {
   return (
     <Page t={t} resources={resources} locale={locale}>
       <ProjectHeader t={t} project={project} />
-      <TabSelector selectedTab={tab} projectId={project.id} />
+      <TabSelector
+        selectedTab={tab}
+        projectId={project.id}
+        hasTermsOfUse={
+          project?.hasTermsOfUsePage ? project.hasTermsOfUsePage : false
+        }
+        hasPrivacyPolice={
+          project?.hasPrivacyPolicePage ? project.hasPrivacyPolicePage : false
+        }
+      />
       <TabContent selectedTab={tab} project={project} />
     </Page>
   );

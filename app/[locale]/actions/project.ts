@@ -18,6 +18,6 @@ interface GetProjectDetails {
   id: string;
 }
 export async function getProjectDetails({ locale, id }: GetProjectDetails): Promise<ProjectProps> {
-  const response = await strapiApi.get<StrapiResponseObject<ProjectStrapiProps>>(`/api/projects/${id}?locale=${locale}&populate=background&populate=icon`)
+  const response = await strapiApi.get<StrapiResponseObject<ProjectStrapiProps>>(`/api/projects/${id}?locale=${locale}&populate=icon`)
   return projectAdapter.parseProject(response.data.data);
 }

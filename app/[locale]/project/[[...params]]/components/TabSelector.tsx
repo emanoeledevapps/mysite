@@ -9,8 +9,15 @@ import { Tabs } from "./TabContent/TabContent";
 interface Props {
   projectId: string;
   selectedTab: Tabs;
+  hasPrivacyPolice?: boolean;
+  hasTermsOfUse?: boolean;
 }
-export function TabSelector({ selectedTab, projectId }: Props) {
+export function TabSelector({
+  selectedTab,
+  projectId,
+  hasPrivacyPolice,
+  hasTermsOfUse,
+}: Props) {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -29,12 +36,34 @@ export function TabSelector({ selectedTab, projectId }: Props) {
       />
 
       <TabItem
-        isSelected={selectedTab === "privacy-policy"}
+        isSelected={
+          selectedTab === "about-development" || selectedTab === undefined
+        }
         t={t}
-        label="privacyPolicy"
-        value="privacy-policy"
+        label="aboutDevelopment"
+        value="about-development"
         onChange={changeTab}
       />
+
+      {hasPrivacyPolice && (
+        <TabItem
+          isSelected={selectedTab === "privacy-policy"}
+          t={t}
+          label="privacyPolicy"
+          value="privacy-policy"
+          onChange={changeTab}
+        />
+      )}
+
+      {hasTermsOfUse && (
+        <TabItem
+          isSelected={selectedTab === "terms-of-use"}
+          t={t}
+          label="termsOfUse"
+          value="terms-of-use"
+          onChange={changeTab}
+        />
+      )}
     </section>
   );
 }

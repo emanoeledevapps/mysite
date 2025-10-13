@@ -24,6 +24,20 @@ export function RenderBlock({ block, key }: Props): JSX.Element {
           )}
         </p>
       );
+    case "link":
+      return (
+        <a
+          key={key}
+          href={block?.url}
+          target="_blank"
+          rel="noreferer noopener"
+          className="underline text-blue-500"
+        >
+          {block.children?.map((child, i) =>
+            RenderBlock({ block: child, key: `${key}-a${i}` })
+          )}
+        </a>
+      );
     case "text":
       if (block.bold) {
         return (
@@ -40,14 +54,7 @@ export function RenderBlock({ block, key }: Props): JSX.Element {
         );
       }
 
-      if (block.italic && block.bold) {
-        return (
-          <strong key={key} className="italic font-bold">
-            {block.text}
-          </strong>
-        );
-      }
-      return <span>{block.text}</span>;
+      return <span key={`s${key}`}>{block.text}</span>;
     default:
       return <div key={key} />;
   }
