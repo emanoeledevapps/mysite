@@ -2,5 +2,8 @@
   "header": {
     "projects": "Projects",
     "about": "About"
+  },
+  "home": {
+    "slogan": "From code to reality"
   }
 }

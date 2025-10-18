@@ -2,16 +2,18 @@ import { ProjectProps } from "@/types/project";
 import { getProjectsList } from "../../actions/project";
 import Image from "next/image";
 import Link from "next/link";
+import { TType } from "@/types/t";
 
 interface Props {
   locale: string;
+  t: TType;
 }
-export async function ProjectsList({ locale }: Props) {
+export async function ProjectsList({ locale, t }: Props) {
   const response = await getProjectsList({ locale });
 
   return (
-    <section className="flex flex-col gap-1">
-      <h3 className="text-primary">Feature projects</h3>
+    <section className="flex flex-col gap-1 mb-10 lg:mb-20">
+      <h3 className="text-primary">{t("home.lastProjects")}</h3>
       <div className="flex gap-5">
         {response.slice(0, 4).map((item) => (
           <ProjectItem key={item.id} project={item} />
@@ -34,9 +36,9 @@ function ProjectItem({ project }: ProjectItemProps) {
         <Image
           src={project?.icon ? project.icon?.url : ""}
           alt={
-            project?.background
-              ? project.background?.alternativeText
-                ? project.background.alternativeText
+            project?.icon
+              ? project.icon?.alternativeText
+                ? project.icon.alternativeText
                 : ""
               : ""
           }
