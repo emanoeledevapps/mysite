@@ -17,6 +17,11 @@ export interface ProjectStrapiProps {
   privacy_police: BlockNodeStrapi[];
   terms_of_use: BlockNodeStrapi[];
   about_development: BlockNodeStrapi[];
+  emphasis: boolean;
+  google_play_url: string | null;
+  apple_store_url: string | null;
+  web_app_url: string | null;
+  github_url: string | null;
 }
 
 export interface ProjectProps {
@@ -33,6 +38,11 @@ export interface ProjectProps {
   privacyPolice: BlockNodeStrapi[] | null;
   termsOfUse: BlockNodeStrapi[] | null;
   aboutDevelopment: BlockNodeStrapi[] | null;
+  emphasis: boolean;
+  googlePlayUrl: string | null;
+  appleStoreUrl: string | null;
+  webAppUrl: string | null;
+  githubUrl: string | null;
 }
 
 export interface ImageProject {

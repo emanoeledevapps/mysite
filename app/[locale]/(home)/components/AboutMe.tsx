@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import ImgDev from "@/public/assets/perfil.jpg";
 import { TType } from "@/types/t";
+import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { FaDiscord, FaWhatsapp } from "react-icons/fa6";
 
 interface Props {
   t: TType;
@@ -18,13 +21,14 @@ export function AboutMe({ t }: Props) {
           alt="Image of me"
         />
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <h3 className="text-black font-bold lg:text-2xl">
             Emanoel Augusto Freires
           </h3>
           <p className="text-gray-600 text-sm lg:text-base">
             23 {t("home.years")}, Santo André - SP
           </p>
+          <Links />
         </div>
       </div>
 
@@ -39,5 +43,31 @@ export function AboutMe({ t }: Props) {
         <Button className="mt-5">{t("home.seeMore")}</Button>
       </div>
     </section>
+  );
+}
+
+function Links() {
+  return (
+    <div className="flex items-center gap-5 mt-1">
+      <Link
+        href="https://github.com/emanoeledevapps"
+        target="_blank"
+        rel="noopener noreferer"
+      >
+        <Github size={30} />
+      </Link>
+
+      <Link
+        href="https://www.linkedin.com/in/emanoel-augusto-515915233/"
+        target="_blank"
+        rel="noopener noreferer"
+      >
+        <Linkedin size={30} />
+      </Link>
+
+      <Link href="" target="_blank" rel="noopener noreferer">
+        <FaWhatsapp size={30} />
+      </Link>
+    </div>
   );
 }

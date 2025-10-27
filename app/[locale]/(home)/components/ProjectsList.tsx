@@ -32,7 +32,7 @@ function ProjectItem({ project }: ProjectItemProps) {
       href={`/project/${project.id}`}
       className="rounded-2xl flex flex-col gap-3 bg-card w-[250px] overflow-hidden"
     >
-      <div className="w-full h-[200px] bg-red-500">
+      <div className="w-full h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
           alt={

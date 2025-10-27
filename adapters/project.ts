@@ -34,7 +34,12 @@ function parseProject(data: ProjectStrapiProps): ProjectProps {
     hasTermsOfUsePage: data.has_terms_of_use,
     privacyPolice: data.privacy_police,
     termsOfUse: data.terms_of_use,
-    aboutDevelopment: data.about_development
+    aboutDevelopment: data.about_development,
+    appleStoreUrl: data.apple_store_url,
+    emphasis: data.emphasis,
+    githubUrl: data.github_url,
+    googlePlayUrl: data.github_url,
+    webAppUrl: data.web_app_url
   }
 }
 
