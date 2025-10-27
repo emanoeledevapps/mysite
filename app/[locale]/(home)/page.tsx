@@ -5,6 +5,7 @@ import { AboutMe } from "./components/AboutMe";
 
 import TextLogo from "@/public/assets/text-logo.png";
 import Image from "next/image";
+import { EmphasisProjects } from "./components/EmphasisProjects";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,6 +34,8 @@ export default async function Home({ params }: Props) {
       </div>
 
       <ProjectsList locale={locale} t={t} />
+
+      <EmphasisProjects locale={locale} t={t} />
 
       <AboutMe t={t} />
     </Page>

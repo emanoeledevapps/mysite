@@ -21,3 +21,11 @@ export async function getProjectDetails({ locale, id }: GetProjectDetails): Prom
   const response = await strapiApi.get<StrapiResponseObject<ProjectStrapiProps>>(`/api/projects/${id}?locale=${locale}&populate=icon`)
   return projectAdapter.parseProject(response.data.data);
 }
+
+interface GetEmphasisProjectsList {
+  locale: string
+}
+export async function getEmphasisProjects({ locale }: GetEmphasisProjectsList): Promise<ProjectProps[]> {
+  const response = await strapiApi.get<StrapiResponseArray<ProjectStrapiProps>>(`/api/projects?locale=${locale}&filters[emphasis][$eq]=true&populate=icon`)
+  return response.data.data.map(projectAdapter.parseProject)
+}
