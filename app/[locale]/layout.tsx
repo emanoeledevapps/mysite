@@ -7,13 +7,13 @@ import { notFound } from "next/navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EDevApps - Desenvolvimento de aplicativos e websites",
+  title: "Edevapps - Desenvolvimento de aplicativos e websites",
   description:
     "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
   icons: "https://edevapps.com.br/assets/perfil.jpg",
   openGraph: {
     images: "https://edevapps.com.br/assets/post-square.png",
-    title: "EDevApps - Desenvolvimento de aplicativos e websites",
+    title: "Edevapps - Desenvolvimento de aplicativos e websites",
     description:
       "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
   },
@@ -37,7 +37,9 @@ export default async function RootLayout({
   }
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-black`}>{children}</body>
     </html>
   );
 }
+
+// bg-gradient-to-b from-[#0888ec] via-[#4cd79f] to-[#7E42DE]

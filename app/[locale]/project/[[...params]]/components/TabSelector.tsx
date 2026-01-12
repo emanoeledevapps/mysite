@@ -26,7 +26,7 @@ export function TabSelector({
   }
 
   return (
-    <section className="flex gap-5 overflow-x-auto w-full">
+    <section className="flex gap-5 overflow-x-auto w-full container">
       <TabItem
         isSelected={selectedTab === "overview" || selectedTab === undefined}
         t={t}
@@ -81,6 +81,7 @@ function TabItem({ t, isSelected, label, value, onChange }: TabItemProps) {
     <Button
       onClick={() => onChange(value)}
       variant={isSelected ? "default" : "ghost"}
+      className="text-white"
     >
       {t(label)}
     </Button>

@@ -38,7 +38,7 @@ function parseProject(data: ProjectStrapiProps): ProjectProps {
     appleStoreUrl: data.apple_store_url,
     emphasis: data.emphasis,
     githubUrl: data.github_url,
-    googlePlayUrl: data.github_url,
+    googlePlayUrl: data.google_play_url,
     webAppUrl: data.web_app_url
   }
 }

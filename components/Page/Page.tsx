@@ -22,7 +22,7 @@ export function Page({ children, resources, locale, t }: Props) {
       <div className="flex flex-col bg-background">
         <Header t={t} />
 
-        <main className="flex min-h-screen flex-col items-center pb-20 container mx-auto gap-10">
+        <main className="flex min-h-screen flex-col pb-20 gap-10 mt-[75px]">
           {children}
         </main>
 

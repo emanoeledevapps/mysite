@@ -11,8 +11,8 @@ interface Props {
 }
 export function AboutMe({ t }: Props) {
   return (
-    <section className="flex flex-wrap w-full">
-      <div className="w-full flex items-center gap-10 lg:w-[50%] bg-gray-100 rounded-2xl p-5">
+    <section className="flex flex-wrap w-full container">
+      <div className="w-full flex items-center gap-10 lg:w-[50%] bg-card rounded-2xl p-5">
         <Image
           src={ImgDev}
           width={200}
@@ -22,10 +22,10 @@ export function AboutMe({ t }: Props) {
         />
 
         <div className="flex flex-col gap-1">
-          <h3 className="text-black font-bold lg:text-2xl">
+          <h3 className="text-white font-bold lg:text-2xl">
             Emanoel Augusto Freires
           </h3>
-          <p className="text-gray-600 text-sm lg:text-base">
+          <p className="text-gray-400 text-sm lg:text-base">
             23 {t("home.years")}, Santo André - SP
           </p>
           <Links />
@@ -33,14 +33,14 @@ export function AboutMe({ t }: Props) {
       </div>
 
       <div className="w-full flex flex-col gap-1 lg:w-[50%] p-5">
-        <h3 className="font-bold text-2xl">About me</h3>
-        <p className="">
+        <h3 className="font-bold text-2xl text-white">About me</h3>
+        <p className="text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ducimus
           commodi, sit illum corrupti tenetur illo atque dicta, itaque
           necessitatibus rerum enim quia ratione alias tempore, architecto
           molestiae odit fugit.
         </p>
-        <Button className="mt-5">{t("home.seeMore")}</Button>
+        <Button className="mt-5 text-white">{t("home.seeMore")}</Button>
       </div>
     </section>
   );
@@ -48,7 +48,7 @@ export function AboutMe({ t }: Props) {
 
 function Links() {
   return (
-    <div className="flex items-center gap-5 mt-1">
+    <div className="flex items-center gap-5 mt-1 text-white">
       <Link
         href="https://github.com/emanoeledevapps"
         target="_blank"

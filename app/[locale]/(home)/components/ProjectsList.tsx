@@ -12,8 +12,8 @@ export async function ProjectsList({ locale, t }: Props) {
   const response = await getProjectsList({ locale });
 
   return (
-    <section className="flex flex-col gap-1 mb-10 lg:mb-20">
-      <h3 className="text-primary">{t("home.lastProjects")}</h3>
+    <section className="flex flex-col gap-1 my-10 lg:my-20 container">
+      <h3 className="text-white">{t("home.lastProjects")}</h3>
       <div className="flex gap-5">
         {response.slice(0, 4).map((item) => (
           <ProjectItem key={item.id} project={item} />
@@ -30,7 +30,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Link
       href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-card w-[250px] overflow-hidden"
+      className="rounded-2xl flex flex-col gap-3 bg-gray-900 w-[250px] overflow-hidden border border-gray-600"
     >
       <div className="w-full h-[200px]">
         <Image
@@ -49,8 +49,8 @@ function ProjectItem({ project }: ProjectItemProps) {
         />
       </div>
       <div className="flex flex-col gap-1 p-3">
-        <h4 className="font-bold text-primary text-xl">{project.title}</h4>
-        <p className="text-primary">{project.description}</p>
+        <h4 className="font-bold text-white text-xl">{project.title}</h4>
+        <p className="text-white">{project.description}</p>
       </div>
     </Link>
   );

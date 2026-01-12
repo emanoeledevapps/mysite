@@ -31,7 +31,9 @@ export default async function Project({ params }: Props) {
           project?.hasPrivacyPolicePage ? project.hasPrivacyPolicePage : false
         }
       />
-      <TabContent selectedTab={tab} project={project} />
+      <div className="container text-white p-10 rounded-2xl bg-gray-700">
+        <TabContent selectedTab={tab} project={project} />
+      </div>
     </Page>
   );
 }
