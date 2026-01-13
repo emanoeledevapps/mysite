@@ -40,7 +40,7 @@ interface ProjectItemProps {
 function ProjectItem({ project, t }: ProjectItemProps) {
   return (
     <div className="rounded-2xl flex flex-col gap-3 w-full overflow-hidden md:flex-row">
-      <div className="w-[200px] h-[200px]">
+      <div className="min-w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
           alt={

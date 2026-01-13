@@ -43,9 +43,9 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Link
       href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-gray-900 overflow-hidden md:w-[250px] lg:flex-row lg:w-full"
+      className="rounded-2xl flex flex-col gap-3 bg-gray-900 overflow-hidden md:flex-row md:w-full"
     >
-      <div className="w-[200px] h-[200px]">
+      <div className="min-w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
           alt={

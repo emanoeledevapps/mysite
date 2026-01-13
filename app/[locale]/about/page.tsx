@@ -39,7 +39,7 @@ export default async function About({ params }: Props) {
           </div>
         </div>
 
-        <div className="flex flex-col w-full md:max-w-[50%] mt-10 bg-card p-5 rounded-2xl h-fit gap-3">
+        <div className="flex flex-col w-full lg:max-w-[50%] mt-10 bg-card p-5 rounded-2xl h-fit gap-3">
           <p className="text-white">{t("about.description1")}</p>
           <p className="text-white">{t("about.description2")}</p>
           <p className="text-white">{t("about.description3")}</p>
