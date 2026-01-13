@@ -6,10 +6,38 @@ import { FaWhatsapp } from "react-icons/fa6";
 import initTranslations from "@/app/i18n";
 import { Page } from "@/components/Page/Page";
 import ImgDev from "@/public/assets/perfil.jpg";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = (await params).locale;
+  const { t } = await initTranslations(locale, ["common"]);
+
+  return {
+    title: t("about.seo-title"),
+    description: t("about.seo-description"),
+    openGraph: {
+      type: "website",
+      title: t("about.seo-title") as string,
+      description: t("about.seo-description") as string,
+      alternateLocale: ["en", "pt-BR"],
+      url: `https://edevapps.com.br/${locale}/about`,
+      locale,
+      siteName: "edevapps",
+      images: `https://edevapps.com.br/assets/og_${locale}.png`,
+    },
+    alternates: {
+      canonical: "https://edevapps.com.br/about",
+      languages: {
+        en: "https://edevapps.com.br/en/about",
+        pt: "https://edevapps.com.br/pt-BR/about",
+      },
+    },
+  };
+}
 export default async function About({ params }: Props) {
   const { locale } = await params;
   const { t, resources } = await initTranslations(locale, ["common"]);
@@ -17,7 +45,7 @@ export default async function About({ params }: Props) {
   return (
     <Page t={t} resources={resources} locale={locale}>
       <div className="container flex flex-wrap gap-12 justify-center pt-10 lg:pt-20">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 w-full items-center lg:w-auto lg:items-start">
           <h1 className="text-white font-bold text-lg">{t("about.title")}</h1>
 
           <Image
@@ -39,7 +67,7 @@ export default async function About({ params }: Props) {
           </div>
         </div>
 
-        <div className="flex flex-col w-full md:max-w-[50%] mt-10 bg-card p-5 rounded-2xl h-fit gap-3">
+        <div className="flex flex-col w-full lg:max-w-[50%] mt-10 bg-card p-5 rounded-2xl h-fit gap-3">
           <p className="text-white">{t("about.description1")}</p>
           <p className="text-white">{t("about.description2")}</p>
           <p className="text-white">{t("about.description3")}</p>

@@ -1,23 +1,9 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import i18nConfig from "@/i18nconfig";
 import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Edevapps - Desenvolvimento de aplicativos e websites",
-  description:
-    "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
-  icons: "https://edevapps.com.br/assets/perfil.jpg",
-  openGraph: {
-    images: "https://edevapps.com.br/assets/post-square.png",
-    title: "Edevapps - Desenvolvimento de aplicativos e websites",
-    description:
-      "Olá, me chamo Emanoel Augusto, sou desenvolvedor Front-End, e no meu site você pode saber mais sobre mim!",
-  },
-};
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));

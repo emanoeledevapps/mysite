@@ -21,14 +21,14 @@ export function Header({ t }: Props) {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-5 text-white">
+        <nav className="hidden md:flex items-center gap-5 text-white">
           <Link href="/projects">{t("header.projects")}</Link>
 
           <Link href="/about">{t("header.about")}</Link>
         </nav>
 
-        <div className="flex lg:hidden">
-          <NavMenu />
+        <div className="flex md:hidden">
+          <NavMenu t={t} />
         </div>
       </div>
     </header>

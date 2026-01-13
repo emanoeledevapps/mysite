@@ -4,6 +4,8 @@
     "about": "Sobre"
   },
   "home": {
+    "seo-title": "Edevapps",
+    "seo-description": "Desenvolvimento de aplicativos e websites",
     "slogan": "Desenvolvimento de aplicativos e websites",
     "lastProjects": "Últimos projetos",
     "emphasisProject": "Projeto em destaque",
@@ -15,15 +17,21 @@
   },
   "project": {
     "overview": "Visão geral",
+    "seo-title": "Edevapps",
+    "seo-description": "Desenvolvimento de aplicativos e websites",
     "aboutDevelopment": "Sobre o desenvolvimento",
     "privacyPolicy": "Política de privacidade",
     "termsOfUse": "Termos de uso"
   },
   "projects": {
-    "title": "Projetos"
+    "title": "Projetos",
+    "seo-title": "Edevapps - Projetos",
+    "seo-description": "Lista dos projetos já desenvolvidos"
   },
   "about": {
     "title": "Sobre",
+    "seo-title": "Edevapps - Sobre",
+    "seo-description": "Saiba mais sobre mim",
     "description1": "Desenvolvedor frontend de 24 anos, com foco em React para aplicações web e React Native para Android e iOS. Nos meus projetos, priorizo o uso de tecnologias modernas e boas práticas, como Tailwind CSS, React Query, shadcn/ui, Axios para requisições HTTP e i18n para internacionalização.",
     "description2": "Possuo experiência com integrações Web3, utilizando web3.js e MetaMask SDK para interação com contratos inteligentes, além de vivência prática na publicação de aplicativos mobile nas lojas Google Play e App Store.",
     "description3": "Além do desenvolvimento frontend, sou apaixonado por infraestrutura, explorando ativamente o universo de servidores, virtualização e backups, com prática em Proxmox VE, o que me permite ter uma visão mais completa de deploy, disponibilidade e manutenção de aplicações."

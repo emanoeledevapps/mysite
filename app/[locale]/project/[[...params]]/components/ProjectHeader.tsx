@@ -17,10 +17,14 @@ interface Props {
 export function ProjectHeader({ project }: Props) {
   return (
     <section className="flex flex-col w-full mt-20 container">
-      <div className="flex justify-between w-full">
+      <div className="flex flex-col-reverse items-center gap-5 justify-between w-full md:flex-row">
         <div className="flex flex-col gap-2">
-          <h2 className="font-bold text-7xl text-white">{project.title}</h2>
-          <p className="text-gray-300">{project.description}</p>
+          <h2 className="font-bold text-3xl text-white lg:text-7xl">
+            {project.title}
+          </h2>
+          <p className="text-gray-300 text-sm lg:text-base">
+            {project.description}
+          </p>
 
           <div className="mt-3 flex items-center gap-5 flex-wrap">
             {project.githubUrl && (
