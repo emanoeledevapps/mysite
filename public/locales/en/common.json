@@ -1,0 +1,31 @@
+{
+  "header": {
+    "projects": "Projects",
+    "about": "About"
+  },
+  "home": {
+    "slogan": "Apps and websites development",
+    "lastProjects": "Last projects",
+    "emphasisProject": "Emphasis project",
+    "toKnowMore": "To know more",
+    "aboutMe": "About me",
+    "aboutMeDescription": "Frontend developer for 24 years, focusing on React for web applications and React Native for Android and iOS. In my projects, I prioritize the use of modern technologies and best practices, such as Tailwind CSS, React Query, shadcn/ui, Axios for HTTP requests, and i18n for internationalization.",
+    "years": "years",
+    "seeMore": "See more"
+  },
+  "project": {
+    "overview": "Overview",
+    "aboutDevelopment": "About development",
+    "privacyPolicy": "Privacy policy",
+    "termsOfUse": "Terms of use"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "about": {
+    "title": "About",
+    "description1": "Frontend developer for 24 years, focusing on React for web applications and React Native for Android and iOS. In my projects, I prioritize the use of modern technologies and best practices, such as Tailwind CSS, React Query, shadcn/ui, Axios for HTTP requests, and i18n for internationalization.",
+    "description2": "I have experience with Web3 integrations, using web3.js and MetaMask SDK for interacting with smart contracts, as well as practical experience in publishing mobile applications on the Google Play and App Store.",
+    "description3": "In addition to frontend development, I am passionate about infrastructure, actively exploring the world of servers, virtualization, and backups, with practical experience in Proxmox VE, which allows me to have a more complete view of application deployment, availability, and maintenance."
+  }
+}
