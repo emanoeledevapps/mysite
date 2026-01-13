@@ -13,8 +13,10 @@ export async function ProjectsList({ locale, t }: Props) {
 
   return (
     <section className="flex flex-col gap-1 my-10 lg:my-20 container">
-      <h3 className="text-white">{t("home.lastProjects")}</h3>
-      <div className="flex gap-5">
+      <h3 className="text-white text-center font-semibold text-xl md:text-start">
+        {t("home.lastProjects")}
+      </h3>
+      <div className="flex flex-col gap-5 md:flex-row">
         {response.slice(0, 4).map((item) => (
           <ProjectItem key={item.id} project={item} />
         ))}
@@ -30,7 +32,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Link
       href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-card w-[250px] overflow-hidden border border-gray-600"
+      className="w-full rounded-2xl flex flex-col gap-3 bg-card overflow-hidden border border-gray-600 md:w-[250px]"
     >
       <div className="w-full h-[200px]">
         <Image

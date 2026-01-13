@@ -17,7 +17,7 @@ export default async function About({ params }: Props) {
   return (
     <Page t={t} resources={resources} locale={locale}>
       <div className="container flex flex-wrap gap-12 justify-center pt-10 lg:pt-20">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 w-full items-center lg:w-auto lg:items-start">
           <h1 className="text-white font-bold text-lg">{t("about.title")}</h1>
 
           <Image

@@ -22,7 +22,7 @@ export default async function Projects({ params }: Props) {
   return (
     <Page locale={locale} resources={resources} t={t}>
       <div className="container">
-        <h2 className="font-bold mt-10 lg:mt-20 lg:text-5xl text-white text-center">
+        <h2 className="font-bold mt-20 text-2xl text-white text-center lg:text-5xl">
           {t("projects.title")}
         </h2>
 
@@ -43,7 +43,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Link
       href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-gray-900 w-[250px] overflow-hidden lg:flex-row lg:w-full"
+      className="rounded-2xl flex flex-col gap-3 bg-gray-900 overflow-hidden md:w-[250px] lg:flex-row lg:w-full"
     >
       <div className="w-[200px] h-[200px]">
         <Image
@@ -65,7 +65,7 @@ function ProjectItem({ project }: ProjectItemProps) {
         <h4 className="font-bold text-white text-xl">{project.title}</h4>
         <p className="text-gray-300">{project.description}</p>
 
-        <div className="mt-3 flex items-center gap-5 flex-wrap">
+        <div className="mt-3 flex items-center gap-5 flex-wrap justify-center md:justify-start">
           {project.githubUrl && (
             <LinkItem type="github" url={project.githubUrl} />
           )}

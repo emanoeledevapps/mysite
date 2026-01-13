@@ -19,8 +19,8 @@ export async function EmphasisProjects({ locale, t }: Props) {
 
   return (
     <section className="container">
-      <div className="flex flex-col gap-1 mb-10 lg:mb-20 w-full bg-card p-10 rounded-2xl">
-        <h3 className="text-white font-semibold text-xl">
+      <div className="flex flex-col gap-1 mt-10 w-full bg-card p-10 rounded-2xl lg:mt-20">
+        <h3 className="text-white text-center font-semibold text-xl md:text-start">
           {t("home.emphasisProject")}
         </h3>
         <div className="flex flex-col gap-5 w-full mt-5">
@@ -39,7 +39,7 @@ interface ProjectItemProps {
 }
 function ProjectItem({ project, t }: ProjectItemProps) {
   return (
-    <div className="rounded-2xl flex gap-3 w-full overflow-hidden">
+    <div className="rounded-2xl flex flex-col gap-3 w-full overflow-hidden md:flex-row">
       <div className="w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
@@ -56,11 +56,11 @@ function ProjectItem({ project, t }: ProjectItemProps) {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-1 p-3">
+      <div className="flex flex-col gap-1 p-3 md:p-0">
         <h4 className="font-bold text-white text-xl">{project.title}</h4>
         <p className="text-gray-300">{project.description}</p>
 
-        <div className="mt-3 flex items-center gap-5 flex-wrap">
+        <div className="mt-3 flex items-center gap-2 flex-wrap md:gap-5">
           {project.githubUrl && (
             <LinkItem type="github" url={project.githubUrl} />
           )}

@@ -11,8 +11,8 @@ interface Props {
 }
 export function AboutMe({ t }: Props) {
   return (
-    <section className="flex flex-wrap w-full container gap-10">
-      <div className="w-full flex items-center gap-10 lg:w-[48%] bg-card rounded-2xl p-5">
+    <section className="flex flex-wrap w-full container gap-5 lg:gap-10">
+      <div className="w-full flex flex-col items-center gap-10 bg-card rounded-2xl p-5 md:flex-row lg:w-[48%]">
         <Image
           src={ImgDev}
           width={200}
@@ -21,7 +21,7 @@ export function AboutMe({ t }: Props) {
           alt="Image of me"
         />
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 items-center md:items-start">
           <h3 className="text-white font-bold lg:text-2xl">
             Emanoel Augusto Freires
           </h3>
