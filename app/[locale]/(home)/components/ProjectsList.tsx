@@ -30,7 +30,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Link
       href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-gray-900 w-[250px] overflow-hidden border border-gray-600"
+      className="rounded-2xl flex flex-col gap-3 bg-card w-[250px] overflow-hidden border border-gray-600"
     >
       <div className="w-full h-[200px]">
         <Image

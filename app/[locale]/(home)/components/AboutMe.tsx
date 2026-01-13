@@ -26,21 +26,21 @@ export function AboutMe({ t }: Props) {
             Emanoel Augusto Freires
           </h3>
           <p className="text-gray-400 text-sm lg:text-base">
-            23 {t("home.years")}, Santo André - SP
+            24 {t("home.years")}, Santo André/SP
           </p>
           <Links />
         </div>
       </div>
 
       <div className="w-full flex flex-col gap-1 lg:w-[50%] p-5">
-        <h3 className="font-bold text-2xl text-white">About me</h3>
-        <p className="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ducimus
-          commodi, sit illum corrupti tenetur illo atque dicta, itaque
-          necessitatibus rerum enim quia ratione alias tempore, architecto
-          molestiae odit fugit.
-        </p>
-        <Button className="mt-5 text-white">{t("home.seeMore")}</Button>
+        <h3 className="font-bold text-2xl text-white">{t("home.aboutMe")}</h3>
+        <p className="text-white">{t("home.aboutMeDescription")}</p>
+        <Link
+          href="/about"
+          className="rounded-2xl flex items-center justify-center text-white mt-5 gap-3 w-full h-12 bg-primary"
+        >
+          {t("home.seeMore")}
+        </Link>
       </div>
     </section>
   );

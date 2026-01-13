@@ -19,11 +19,13 @@ export async function EmphasisProjects({ locale, t }: Props) {
 
   return (
     <section className="container">
-      <div className="flex flex-col gap-1 mb-10 lg:mb-20 w-full bg-gray-700 p-10 rounded-2xl">
-        <h3 className="text-white">{t("home.emphasisProjects")}</h3>
-        <div className="flex flex-col gap-5 w-full">
+      <div className="flex flex-col gap-1 mb-10 lg:mb-20 w-full bg-card p-10 rounded-2xl">
+        <h3 className="text-white font-semibold text-xl">
+          {t("home.emphasisProject")}
+        </h3>
+        <div className="flex flex-col gap-5 w-full mt-5">
           {response.slice(0, 4).map((item) => (
-            <ProjectItem key={item.id} project={item} />
+            <ProjectItem key={item.id} project={item} t={t} />
           ))}
         </div>
       </div>
@@ -33,13 +35,11 @@ export async function EmphasisProjects({ locale, t }: Props) {
 
 interface ProjectItemProps {
   project: ProjectProps;
+  t: TType;
 }
-function ProjectItem({ project }: ProjectItemProps) {
+function ProjectItem({ project, t }: ProjectItemProps) {
   return (
-    <Link
-      href={`/project/${project.id}`}
-      className="rounded-2xl flex gap-3 w-full overflow-hidden"
-    >
+    <div className="rounded-2xl flex gap-3 w-full overflow-hidden">
       <div className="w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
@@ -74,8 +74,15 @@ function ProjectItem({ project }: ProjectItemProps) {
             <LinkItem type="googleplay" url={project.googlePlayUrl} />
           )}
         </div>
+
+        <Link
+          href={`/project/${project.id}`}
+          className="rounded-2xl flex items-center justify-center text-white mt-5 gap-3 w-full h-12 bg-primary md:px-20 md:w-fit"
+        >
+          {t("home.toKnowMore")}
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 

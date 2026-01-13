@@ -10,13 +10,13 @@ function parseProject(data: ProjectStrapiProps): ProjectProps {
       id: iconResponse.id,
       height: iconResponse.height,
       width: iconResponse.width,
-      largeUrl: `${process.env.STRAPI_API_URL}${iconResponse.formats.large.url}`,
-      mediumUrl: `${process.env.STRAPI_API_URL}${iconResponse.formats.medium.url}`,
-      smallUrl: `${process.env.STRAPI_API_URL}${iconResponse.formats.small.url}`,
-      thumbnailUrl: `${process.env.STRAPI_API_URL}${iconResponse.formats.thumbnail.url}`,
+      largeUrl: `${process.env.STRAPI_API_URL}${iconResponse?.formats?.large?.url}`,
+      mediumUrl: `${process.env.STRAPI_API_URL}${iconResponse?.formats?.medium?.url}`,
+      smallUrl: `${process.env.STRAPI_API_URL}${iconResponse?.formats?.small?.url}`,
+      thumbnailUrl: `${process.env.STRAPI_API_URL}${iconResponse?.formats?.thumbnail?.url}`,
       provider: iconResponse.provider,
       publishedAt: iconResponse.publishedAt,
-      url: `${process.env.STRAPI_API_URL}${iconResponse.url}`,
+      url: `${process.env.STRAPI_API_URL}${iconResponse?.url}`,
       alternativeText: iconResponse.alternativeText
     }
   }
