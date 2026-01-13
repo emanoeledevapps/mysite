@@ -4,6 +4,8 @@
     "about": "About"
   },
   "home": {
+    "seo-title": "Edevapps",
+    "seo-description": "Apps and websites development",
     "slogan": "Apps and websites development",
     "lastProjects": "Last projects",
     "emphasisProject": "Emphasis project",
@@ -14,16 +16,22 @@
     "seeMore": "See more"
   },
   "project": {
+    "seo-title": "Edevapps",
+    "seo-description": "Apps and websites development",
     "overview": "Overview",
     "aboutDevelopment": "About development",
     "privacyPolicy": "Privacy policy",
     "termsOfUse": "Terms of use"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "seo-title": "Edevapps - Projects",
+    "seo-description": "List of developed projects"
   },
   "about": {
     "title": "About",
+    "seo-title": "Edevapps - About",
+    "seo-description": "To know more about me",
     "description1": "Frontend developer for 24 years, focusing on React for web applications and React Native for Android and iOS. In my projects, I prioritize the use of modern technologies and best practices, such as Tailwind CSS, React Query, shadcn/ui, Axios for HTTP requests, and i18n for internationalization.",
     "description2": "I have experience with Web3 integrations, using web3.js and MetaMask SDK for interacting with smart contracts, as well as practical experience in publishing mobile applications on the Google Play and App Store.",
     "description3": "In addition to frontend development, I am passionate about infrastructure, actively exploring the world of servers, virtualization, and backups, with practical experience in Proxmox VE, which allows me to have a more complete view of application deployment, availability, and maintenance."

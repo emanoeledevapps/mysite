@@ -1,8 +1,9 @@
-import initTranslations from "@/app/i18n";
-import { Page } from "@/components/Page/Page";
-import { getProjectsList } from "../actions/project";
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+import initTranslations from "@/app/i18n";
+import { Page } from "@/components/Page/Page";
 import { ProjectProps } from "@/types/project";
 import {
   FaAppStoreIos,
@@ -11,9 +12,39 @@ import {
   FaGooglePlay,
 } from "react-icons/fa6";
 
+import { getProjectsList } from "../actions/project";
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = (await params).locale;
+  const { t } = await initTranslations(locale, ["common"]);
+
+  return {
+    title: t("projects.seo-title"),
+    description: t("projects.seo-description"),
+    openGraph: {
+      type: "website",
+      title: t("projects.seo-title") as string,
+      description: t("projects.seo-description") as string,
+      alternateLocale: ["en", "pt-BR"],
+      url: `https://edevapps.com.br/${locale}/projects`,
+      locale,
+      siteName: "edevapps",
+      images: `https://edevapps.com.br/assets/og_${locale}.png`,
+    },
+    alternates: {
+      canonical: "https://edevapps.com.br/projects",
+      languages: {
+        en: "https://edevapps.com.br/en/projects",
+        pt: "https://edevapps.com.br/pt-BR/projects",
+      },
+    },
+  };
+}
+
 export default async function Projects({ params }: Props) {
   const { locale } = await params;
   const { t, resources } = await initTranslations(locale, ["common"]);

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Page } from "@/components/Page/Page";
 import initTranslations from "@/app/i18n";
@@ -11,6 +12,33 @@ import { EmphasisProjects } from "./components/EmphasisProjects";
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = (await params).locale;
+  const { t } = await initTranslations(locale, ["common"]);
+
+  return {
+    title: t("home.seo-title"),
+    description: t("home.seo-description"),
+    openGraph: {
+      type: "website",
+      title: t("home.seo-title") as string,
+      description: t("home.seo-description") as string,
+      alternateLocale: ["en", "pt-BR"],
+      url: `https://edevapps.com.br/${locale}`,
+      locale,
+      siteName: "edevapps",
+      images: `https://edevapps.com.br/assets/og_${locale}.png`,
+    },
+    alternates: {
+      canonical: "https://edevapps.com.br",
+      languages: {
+        en: "https://edevapps.com.br/en",
+        pt: "https://edevapps.com.br/pt-BR",
+      },
+    },
+  };
+}
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;

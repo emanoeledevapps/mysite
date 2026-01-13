@@ -6,10 +6,38 @@ import { FaWhatsapp } from "react-icons/fa6";
 import initTranslations from "@/app/i18n";
 import { Page } from "@/components/Page/Page";
 import ImgDev from "@/public/assets/perfil.jpg";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = (await params).locale;
+  const { t } = await initTranslations(locale, ["common"]);
+
+  return {
+    title: t("about.seo-title"),
+    description: t("about.seo-description"),
+    openGraph: {
+      type: "website",
+      title: t("about.seo-title") as string,
+      description: t("about.seo-description") as string,
+      alternateLocale: ["en", "pt-BR"],
+      url: `https://edevapps.com.br/${locale}/about`,
+      locale,
+      siteName: "edevapps",
+      images: `https://edevapps.com.br/assets/og_${locale}.png`,
+    },
+    alternates: {
+      canonical: "https://edevapps.com.br/about",
+      languages: {
+        en: "https://edevapps.com.br/en/about",
+        pt: "https://edevapps.com.br/pt-BR/about",
+      },
+    },
+  };
+}
 export default async function About({ params }: Props) {
   const { locale } = await params;
   const { t, resources } = await initTranslations(locale, ["common"]);
