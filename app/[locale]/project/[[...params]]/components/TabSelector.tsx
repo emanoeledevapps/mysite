@@ -83,7 +83,7 @@ function TabItem({ t, isSelected, label, value, onChange }: TabItemProps) {
       variant={isSelected ? "default" : "ghost"}
       className="text-white"
     >
-      {t(label)}
+      {t(`project.${label}`)}
     </Button>
   );
 }

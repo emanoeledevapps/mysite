@@ -12,7 +12,7 @@ const nextConfig = {
         hostname: "localhost",
       },
       {
-        hostname: "192.168.10.205",
+        hostname: "strapi.edevapps.com.br",
       },
     ],
   },
