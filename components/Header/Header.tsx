@@ -3,6 +3,7 @@ import Link from "next/link";
 import LogoImage from "@/public/assets/logo_white.png";
 import { NavMenu } from "./components/NavMenu";
 import { TType } from "@/types/t";
+import LanguageSelect from "../LanguageSelect/LanguageSelect";
 
 interface Props {
   t: TType;
@@ -16,15 +17,19 @@ export function Header({ t }: Props) {
             src={LogoImage}
             width={200}
             height={50}
-            className="object-contain"
+            className="object-contain w-[150px] md:w-[200px]"
             alt="logo"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-5 text-white">
+        <nav className="hidden md:flex items-center gap-10 text-white">
           <Link href="/projects">{t("header.projects")}</Link>
 
           <Link href="/about">{t("header.about")}</Link>
+
+          <div className="hidden md:flex">
+            <LanguageSelect />
+          </div>
         </nav>
 
         <div className="flex md:hidden">

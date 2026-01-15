@@ -1,5 +1,7 @@
-import Image from "next/image";
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa6";
 
 import { Page } from "@/components/Page/Page";
 import initTranslations from "@/app/i18n";
@@ -48,22 +50,30 @@ export default async function Home({ params }: Props) {
     <Page locale={locale} resources={resources} t={t}>
       <div className=" bg-gradient-to-r from-[#0888ec] via-[#4cd79f] to-[#7E42DE]">
         <div className="w-full lg:w-[1024px] flex flex-col h-[400px] items-center justify-center my-10 container lg:h-[300px] lg:my-20">
-          <div className="flex flex-col w-full items-center px-2 gap-5 lg:gap-20 lg:px-0 md:flex-row">
+          <div className="flex flex-col w-full items-center px-2 gap-4 lg:gap-20 lg:px-0 md:flex-row">
             <Image
               src={Logo}
-              width={1000}
-              height={100}
+              width={500}
+              height={500}
               className="object-contain w-[150px] md:w-[280px] md:flex"
               alt="logo"
               quality={100}
             />
-            <div className="flex flex-col gap-5 items-start">
-              <h2 className="font-bold text-white text-center text-7xl lg:text-start lg:text-9xl">
+            <div className="flex flex-col gap-4 items-center md:items-start">
+              <h2 className="font-bold text-white text-center text-6xl lg:text-start lg:text-9xl">
                 edevapps
               </h2>
               <h3 className="text-2xl text-white text-center ml-2">
                 {t("home.slogan")}
               </h3>
+              <Link
+                href="https://wa.me/message/Y6AARKQAQ7AVK1"
+                target="_blank"
+                className="w-fit px-10 py-3 flex items-center gap-3 text-white bg-primary rounded-2xl duration-300 hover:bg-primary-foreground hover:text-black"
+              >
+                <FaWhatsapp size={30} />
+                {t("home.whatsapp")}
+              </Link>
             </div>
           </div>
         </div>

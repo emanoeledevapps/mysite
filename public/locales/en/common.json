@@ -13,7 +13,8 @@
     "aboutMe": "About me",
     "aboutMeDescription": "Frontend developer for 24 years, focusing on React for web applications and React Native for Android and iOS. In my projects, I prioritize the use of modern technologies and best practices, such as Tailwind CSS, React Query, shadcn/ui, Axios for HTTP requests, and i18n for internationalization.",
     "years": "years",
-    "seeMore": "See more"
+    "seeMore": "See more",
+    "whatsapp": "Get in touch"
   },
   "project": {
     "seo-title": "Edevapps",

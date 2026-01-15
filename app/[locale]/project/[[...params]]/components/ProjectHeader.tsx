@@ -79,7 +79,7 @@ function LinkItem({ type, url }: LinkItemProps) {
       {type === "googleplay" && <FaGooglePlay size={25} />}
       {type === "webapp" && <FaEarthAmericas size={25} />}
       {type === "github" && "Github"}
-      {type === "applestore" && "Apple Store"}
+      {type === "applestore" && "App Store"}
       {type === "googleplay" && "Google Play"}
       {type === "webapp" && "Web App"}
     </Link>

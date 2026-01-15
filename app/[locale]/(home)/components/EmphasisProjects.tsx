@@ -19,7 +19,7 @@ export async function EmphasisProjects({ locale, t }: Props) {
 
   return (
     <section className="container">
-      <div className="flex flex-col gap-1 mt-10 w-full bg-card p-10 rounded-2xl lg:mt-20">
+      <div className="flex flex-col gap-1 mt-10 w-full bg-card p-5 rounded-2xl lg:mt-20 md:p-10">
         <h3 className="text-white text-center font-semibold text-xl md:text-start">
           {t("home.emphasisProject")}
         </h3>
@@ -39,7 +39,7 @@ interface ProjectItemProps {
 }
 function ProjectItem({ project, t }: ProjectItemProps) {
   return (
-    <div className="rounded-2xl flex flex-col gap-3 w-full overflow-hidden md:flex-row">
+    <div className="rounded-2xl flex flex-col gap-5 w-full overflow-hidden md:flex-row">
       <div className="min-w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
@@ -56,7 +56,7 @@ function ProjectItem({ project, t }: ProjectItemProps) {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-1 p-3 md:p-0">
+      <div className="flex flex-col gap-1">
         <h4 className="font-bold text-white text-xl">{project.title}</h4>
         <p className="text-gray-300">{project.description}</p>
 
@@ -103,7 +103,7 @@ function LinkItem({ type, url }: LinkItemProps) {
       {type === "googleplay" && <FaGooglePlay size={25} />}
       {type === "webapp" && <FaEarthAmericas size={25} />}
       {type === "github" && "Github"}
-      {type === "applestore" && "Apple Store"}
+      {type === "applestore" && "App Store"}
       {type === "googleplay" && "Google Play"}
       {type === "webapp" && "Web App"}
     </Link>
