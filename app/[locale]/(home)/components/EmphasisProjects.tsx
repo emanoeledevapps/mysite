@@ -19,7 +19,7 @@ export async function EmphasisProjects({ locale, t }: Props) {
 
   return (
     <section className="container">
-      <div className="flex flex-col gap-1 mt-10 w-full bg-card p-10 rounded-2xl lg:mt-20">
+      <div className="flex flex-col gap-1 mt-10 w-full bg-card p-5 rounded-2xl lg:mt-20 md:p-10">
         <h3 className="text-white text-center font-semibold text-xl md:text-start">
           {t("home.emphasisProject")}
         </h3>
@@ -103,7 +103,7 @@ function LinkItem({ type, url }: LinkItemProps) {
       {type === "googleplay" && <FaGooglePlay size={25} />}
       {type === "webapp" && <FaEarthAmericas size={25} />}
       {type === "github" && "Github"}
-      {type === "applestore" && "Apple Store"}
+      {type === "applestore" && "App Store"}
       {type === "googleplay" && "Google Play"}
       {type === "webapp" && "Web App"}
     </Link>

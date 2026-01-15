@@ -16,7 +16,7 @@ export function Header({ t }: Props) {
             src={LogoImage}
             width={200}
             height={50}
-            className="object-contain"
+            className="object-contain w-[150px] md:w-[200px]"
             alt="logo"
           />
         </Link>

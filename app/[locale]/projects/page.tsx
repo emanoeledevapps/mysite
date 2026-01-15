@@ -1,16 +1,17 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-
-import initTranslations from "@/app/i18n";
-import { Page } from "@/components/Page/Page";
-import { ProjectProps } from "@/types/project";
 import {
   FaAppStoreIos,
   FaEarthAmericas,
   FaGithub,
   FaGooglePlay,
 } from "react-icons/fa6";
+
+import initTranslations from "@/app/i18n";
+import { Page } from "@/components/Page/Page";
+import { ProjectProps } from "@/types/project";
+import { TType } from "@/types/t";
 
 import { getProjectsList } from "../actions/project";
 
@@ -59,7 +60,7 @@ export default async function Projects({ params }: Props) {
 
         <div className="flex flex-col gap-5 mt-20 w-full">
           {response.map((item) => (
-            <ProjectItem key={item.id} project={item} />
+            <ProjectItem key={item.id} project={item} t={t} />
           ))}
         </div>
       </div>
@@ -69,13 +70,11 @@ export default async function Projects({ params }: Props) {
 
 interface ProjectItemProps {
   project: ProjectProps;
+  t: TType;
 }
-function ProjectItem({ project }: ProjectItemProps) {
+function ProjectItem({ project, t }: ProjectItemProps) {
   return (
-    <Link
-      href={`/project/${project.id}`}
-      className="rounded-2xl flex flex-col gap-3 bg-gray-900 overflow-hidden md:flex-row md:w-full"
-    >
+    <div className="rounded-2xl flex flex-col gap-3 bg-gray-900 overflow-hidden md:flex-row md:w-full">
       <div className="min-w-[200px] h-[200px]">
         <Image
           src={project?.icon ? project.icon?.url : ""}
@@ -110,8 +109,15 @@ function ProjectItem({ project }: ProjectItemProps) {
             <LinkItem type="googleplay" url={project.googlePlayUrl} />
           )}
         </div>
+
+        <Link
+          href={`/project/${project.id}`}
+          className="rounded-2xl flex items-center justify-center text-white mt-5 gap-3 w-full h-12 bg-primary md:px-20 md:w-fit"
+        >
+          {t("home.toKnowMore")}
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 
@@ -132,7 +138,7 @@ function LinkItem({ type, url }: LinkItemProps) {
       {type === "googleplay" && <FaGooglePlay size={25} />}
       {type === "webapp" && <FaEarthAmericas size={25} />}
       {type === "github" && "Github"}
-      {type === "applestore" && "Apple Store"}
+      {type === "applestore" && "App Store"}
       {type === "googleplay" && "Google Play"}
       {type === "webapp" && "Web App"}
     </Link>

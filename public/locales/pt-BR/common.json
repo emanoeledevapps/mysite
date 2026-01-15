@@ -13,7 +13,8 @@
     "aboutMe": "Sobre mim",
     "aboutMeDescription": "Desenvolvedor frontend de 24 anos, com foco em React para aplicações web e React Native para Android e iOS. Nos meus projetos, priorizo o uso de tecnologias modernas e boas práticas, como Tailwind CSS, React Query, shadcn/ui, Axios para requisições HTTP e i18n para internacionalização.",
     "years": "anos",
-    "seeMore": "Ver mais"
+    "seeMore": "Ver mais",
+    "whatsapp": "Entre em contato"
   },
   "project": {
     "overview": "Visão geral",
