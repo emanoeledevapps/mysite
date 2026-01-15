@@ -32,7 +32,7 @@ export function AboutMe({ t }: Props) {
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-1 lg:w-[48%] p-5">
+      <div className="w-full flex flex-col gap-1 lg:w-[48%] p-0 md-p-5">
         <h3 className="font-bold text-2xl text-white">{t("home.aboutMe")}</h3>
         <p className="text-white text-justify">
           {t("home.aboutMeDescription")}
