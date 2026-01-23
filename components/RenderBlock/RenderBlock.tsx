@@ -48,10 +48,7 @@ export function RenderBlock({ block, key }: Props): JSX.Element {
       return (
         <div key={key} className="my-4">
           <Image
-            src={block.image.url.replace(
-              "http://192.168.10.205",
-              "https://strapi.edevapps.com.br",
-            )}
+            src={block.image.url}
             alt={block.image.alternativeText || ""}
             width={block.image.width ?? 800}
             height={block.image.height ?? 450}
