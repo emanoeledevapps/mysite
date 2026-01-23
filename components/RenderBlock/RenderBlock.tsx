@@ -1,4 +1,5 @@
 import { BlockNodeStrapi } from "@/types/project";
+import Image from "next/image";
 import { ReactNode } from "react";
 
 interface Props {
@@ -13,14 +14,14 @@ export function RenderBlock({ block, key }: Props): JSX.Element {
         level: block.level ?? 1,
         key,
         children: block.children?.map((child, i) =>
-          RenderBlock({ block: child, key: `${key}-c${i}` })
+          RenderBlock({ block: child, key: `${key}-c${i}` }),
         ),
       });
     case "paragraph":
       return (
         <p key={key}>
           {block.children?.map((child, i) =>
-            RenderBlock({ block: child, key: `${key}-c${i}` })
+            RenderBlock({ block: child, key: `${key}-c${i}` }),
           )}
         </p>
       );
@@ -34,9 +35,29 @@ export function RenderBlock({ block, key }: Props): JSX.Element {
           className="underline text-blue-500"
         >
           {block.children?.map((child, i) =>
-            RenderBlock({ block: child, key: `${key}-a${i}` })
+            RenderBlock({ block: child, key: `${key}-a${i}` }),
           )}
         </a>
+      );
+
+    case "image":
+      if (!block.image) {
+        return <div key={key} />;
+      }
+
+      return (
+        <div key={key} className="my-4">
+          <Image
+            src={block.image.url.replace(
+              "http://192.168.10.205",
+              "https://strapi.edevapps.com.br",
+            )}
+            alt={block.image.alternativeText || ""}
+            width={block.image.width ?? 800}
+            height={block.image.height ?? 450}
+            className="rounded-lg"
+          />
+        </div>
       );
     case "text":
       if (block.bold) {

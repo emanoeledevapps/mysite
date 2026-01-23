@@ -67,4 +67,10 @@ export interface BlockNodeStrapi {
   bold?: boolean;
   italic?: boolean;
   url?: string;
+  image?: {
+    alternativeText: string;
+    url: string;
+    width?: number;
+    height?: number;
+  };
 }
