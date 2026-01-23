@@ -3,6 +3,7 @@ import { getProjectsList } from "../../actions/project";
 import Image from "next/image";
 import Link from "next/link";
 import { TType } from "@/types/t";
+import { ChevronRight } from "lucide-react";
 
 interface Props {
   locale: string;
@@ -20,6 +21,18 @@ export async function ProjectsList({ locale, t }: Props) {
         {response.slice(0, 4).map((item) => (
           <ProjectItem key={item.id} project={item} />
         ))}
+
+        <div className="w-full md:w-[180px] items-center justify-center flex flex-col">
+          <Link
+            href="/projects"
+            className="flex flex-col items-center gap-2 text-white"
+          >
+            <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
+              <ChevronRight className="text-white" />
+            </div>
+            {t("home.seeAllProjects")}
+          </Link>
+        </div>
       </div>
     </section>
   );
