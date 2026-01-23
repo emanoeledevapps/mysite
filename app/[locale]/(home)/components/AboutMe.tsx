@@ -12,7 +12,7 @@ interface Props {
 export function AboutMe({ t }: Props) {
   return (
     <section className="flex flex-wrap w-full container gap-5 lg:gap-10">
-      <div className="w-full flex flex-col items-center gap-10 bg-card rounded-2xl p-5 md:flex-row lg:w-[48%]">
+      <div className="w-full flex flex-col items-center gap-10 bg-card rounded-2xl p-5 md:flex-row md:w-[47%]">
         <Image
           src={ImgDev}
           width={200}
@@ -32,7 +32,7 @@ export function AboutMe({ t }: Props) {
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-1 lg:w-[48%] p-0 md-p-5">
+      <div className="w-full flex flex-col gap-1 md:w-[47%] p-0 md-p-5">
         <h3 className="font-bold text-2xl text-white">{t("home.aboutMe")}</h3>
         <p className="text-white text-justify">
           {t("home.aboutMeDescription")}
